@@ -14,7 +14,7 @@ To utilize the project, you must use Eclipse and have the following extensions:
 
 Update the drivers based on your current setup browser version and desired SeleniumVersion if you would like to run your tests locally. At the time, I am currently using Chrome 67 and Firefox 60
 
-### Maven - Structure
+### Details
 
 Two folders were added to divide the Page and Test classes. The TestBase utilizes @BeforeMethod (TestNG) to initialize the Driver. Depending on your desired structure you can create a separate class specifically to initalize the Driver, lets call the file "Core", where TestBase and PageBase inherit from "Core".
 
