@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<!-- - TestNG Test Suite to run all tests sequentially - parallel="tests" 
+	runs each test within all 3 browsers -->
+<suite name="Suite" parallel="tests" thread-count="3">
+
+	<listeners>
+		<listener class-name="tests.AnnotationTransformer" />
+	</listeners>
+
+	<parameter name="environment" value="google" /> <!-- google, bing, yahoo -->
+	<parameter name="setup" value="local" /> <!-- sauce, local -->
+
+	<test name="Test Chrome">
+		<parameter name="browser" value="Chrome" />
+		<classes>
+			<class name="tests.QuickTest" />
+		</classes>
+	</test>
+
+	<test name="Test Firefox">
+		<parameter name="browser" value="Firefox" />
+		<classes>
+			<class name="tests.QuickTest" />
+		</classes>
+	</test>
+
+	<test name="Test IE">
+		<parameter name="browser" value="IE" />
+		<classes>
+			<class name="tests.QuickTest" />
+		</classes>
+	</test>
+</suite> <!-- Suite -->
