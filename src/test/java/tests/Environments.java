@@ -8,10 +8,4 @@ public interface Environments extends Config {
 	String URL();
 
 	String SearchField();
-
-	String EngineerUserName();
-
-	String OperatorUserName();
-
-	String PasswordLogin();
 }
